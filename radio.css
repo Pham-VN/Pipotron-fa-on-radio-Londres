@@ -1,0 +1,29 @@
+body {
+    background: black;
+    color: white;
+}
+h1 {
+    text-align: center;
+    margin: 15% 0% 5% 0%;
+    font-size: 80px;
+}
+#mot {
+    margin-left: 25%;
+    display: block;
+    width: 600px;
+    height: 80px;
+    font-size: 40px;
+    text-align: center;
+}
+#button {
+    background: #0b7fba;
+      color: #fff;
+      font-size: 20px;
+      padding: 20px 50px;
+      margin: 0 auto 60px;
+      display: block;
+      text-align: center;
+      border-radius: 6px;
+      font-weight: bold;
+  }
+  

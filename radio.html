@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pipotron façon radio Londres</title>
+    <link rel="stylesheet" href="radio.css">
+</head>
+<body>
+    <FORM NAME="myform" ACTION="" METHOD="GET">
+       <h1> On a des phrases:</h1> <BR>
+        <INPUT TYPE="text" NAME="inputbox" VALUE="" id="mot"><P>
+        <INPUT TYPE="button" NAME="button2" Value="Créer" onClick="creer_phrase(this.form)" id="button">
+        </FORM>
+    <script>
+        var tab_verbe = ["préparer","chanter", "aimer","regarder","dessiner","étudier"];
+        var gr_nominal = ["le dîner","une chanson", "le cadeau", "la télévision", "un chien","le français"];
+        var pronominal = ["Je","Tu","Il/Elle","Nous","Vous","Ils/Elles"];
+        var marque_v_gr1 = ["e","es","e","ons","ez","ent"];
+    
+        function phrase() {
+            var phr;
+            for (var i = 0; i < 6; i++) {
+                var number = Math.floor(Math.random() *6);
+                var verbe = tab_verbe[number].slice(0,-2);
+                var COD = gr_nominal[number];
+                var S =  pronominal[number] 
+                var prefixe = marque_v_gr1[number]
+                phr = S + " " + verbe + prefixe + " " + COD  + ".";
+                return phr;
+            }
+        }
+        
+        function creer_phrase (form) {
+            form.inputbox.value = phrase();
+        }
+    </script>
+</body>
+</html>
